@@ -1,25 +1,32 @@
 package ua.com.qalight;
 
-
+import java.util.HashSet;
+import java.util.Set;
 import java.util.logging.Logger;
 
 import ua.com.qalight.vovk.User;
+import ua.com.qalight.vovk.service.Randomizer;
 
 public class AppRunner {
-	
+
 	static Logger logger = Logger.getLogger(AppRunner.class.getName());
-	
 
 	public static void main(String[] args) {
-		System.out.println("out text");
-		
-		User userOlga = new User();
-		userOlga.setUserId(1997);
-		userOlga.setUreSurname("Vovk");
-		userOlga.setAge(21);
-		userOlga.setUserName("Olga");
-		
-		logger.info("User" + userOlga.getUserName() + "has Id" + userOlga.getUserId());
-		
+
+		Set<String> emails = new HashSet<>();
+
+		for (int i = 0; i < 10; i++) {
+
+			String Login = Randomizer.getRandomString(Randomizer.getRandomInteger(8, 16));
+
+			email = "@" + Randomizer.getRandomDomain(Randomizer.getRandomInteger(1, 5));
+
+			emails.add(email);
+
+		}
+		for (String email : emails) {
+			logger.info(email);
+		}
 	}
+
 }
