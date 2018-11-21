@@ -12,12 +12,12 @@ public class Randomizer {
 	private static final List<String> DOMAINS = Arrays.asList("gmail.com", "hotmail.com", "mail.com", "i.ua", "bigmir.net");
 	
 	public static Integer getRandomInteger(int min, int max) {
-		Integer maxValue = (int)(max*Math.random())-min+1;
+		Integer maxValue = (int)((max-min)*Math.random())+1;
 		
 		return min + maxValue;
 	}
 	
-	private static String getRandomDomain(int index) {
+	public static String getRandomDomain(int index) {
 		switch (index) {
 		case 1:
 			return DOMAINS.get(0);
@@ -34,4 +34,21 @@ public class Randomizer {
 		}
 	}
 
+	public static String getRandomString(int stringLength) {
+		String out = "";
+
+		for (int i = 0; i < stringLength; i++) {
+			out += getRandomLetter();
+		}
+		
+		return out;
+	}
+
+	private static String getRandomLetter() {
+		String sourceString = LETTERS_LOW_CASE + LETTERS_UPPER_CASE + NUMBERS;
+		
+		int srcLength = sourceString.length();
+		
+		return String.valueOf(sourceString.charAt(getRandomInteger(0, srcLength-1)));
+	}
 }
