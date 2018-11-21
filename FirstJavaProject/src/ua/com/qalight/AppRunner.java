@@ -1,5 +1,10 @@
 package ua.com.qalight;
 
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.PriorityQueue;
+import java.util.Queue;
 import java.util.logging.Logger;
 
 import ua.com.qalight.ignatenko.User;
@@ -10,33 +15,28 @@ public class AppRunner {
 	
 	public static void main(String[] args) {
 		
-		User userAlex = new User();
-		userAlex.setUserId(12345);
-		userAlex.setUserName("Alex");
-		userAlex.setUserSurname("Ignatenko");
-		userAlex.setAge(35);
-		
-		logger.info("User " + userAlex.getUserName() + " has id " + userAlex.getUserId());
-		
-		User userPupkin = new User();
-		userPupkin.setUserId(12346);
-		userPupkin.setUserName("Vasil");
-		userPupkin.setUserSurname("Pupkin");
-		userPupkin.setAge(33);
-		
-		logger.info("User " + userPupkin.getUserName() + " has id " + userPupkin.getUserId());
+		List<Integer> rooms = new ArrayList<>();
 
- 	}
-	
-	private void printSomething(String text)
-	{
-		System.out.println(text);
-	}
-	
-	private void printSomething(String text, Integer iterator)
-	{
-		for (int i = 0; i < iterator; i++) {
-			System.out.println(text);
+		int i = 0;
+//		i=15;
+//		logger.info(String.valueOf(i));
+//
+//		i=25;
+//		logger.info(String.valueOf(i));
+//
+//		i=258;
+//		logger.info(String.valueOf(i));
+
+		for(i = 0; i < 10; i++) {
+			rooms.add(i);
 		}
-	}
+		
+		for (int j = 0; j < rooms.size(); j++) {
+			logger.info("room " + String.valueOf(rooms.get(j)));
+		}
+		logger.info(String.valueOf(rooms.size()));
+		
+ 	}
+
+	
 }
