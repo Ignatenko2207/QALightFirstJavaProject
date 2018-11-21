@@ -1,4 +1,4 @@
-package ua.com.qalight.ignatenko;
+package ua.com.qalight.pylypchuk;
 
 public class User {
 
