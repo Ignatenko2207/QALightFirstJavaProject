@@ -42,5 +42,7 @@ public class User {
 		this.userId = userId;
 	}
 	
-	
+	public static void showClassName() {		
+		System.out.println(User.class.getSimpleName());
+	}
 }
