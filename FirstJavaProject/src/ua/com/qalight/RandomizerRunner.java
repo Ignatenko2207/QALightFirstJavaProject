@@ -7,9 +7,9 @@ import java.util.logging.Logger;
 import ua.com.qalight.vovk.User;
 import ua.com.qalight.vovk.service.Randomizer;
 
-public class AppRunner {
+public class RandomizerRunner {
 
-	static Logger logger = Logger.getLogger(AppRunner.class.getName());
+	static Logger logger = Logger.getLogger(RandomizerRunner.class.getName());
 
 	public static void main(String[] args) {
 
@@ -17,7 +17,7 @@ public class AppRunner {
 
 		for (int i = 0; i < 10; i++) {
 
-			String Login = Randomizer.getRandomString(Randomizer.getRandomInteger(8, 16));
+			String email  = Randomizer.getRandomString(Randomizer.getRandomInteger(8, 16));
 
 			email = "@" + Randomizer.getRandomDomain(Randomizer.getRandomInteger(1, 5));
 

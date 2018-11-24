@@ -40,7 +40,13 @@ public class User {
 
 	public void setUserId(int userId) {
 		this.userId = userId;
+		
+		
 	}
 	
+	public static void showUserClassName() {
 	
+		System.out.println(User.class.getSimpleName());
+		
 }
+		}
