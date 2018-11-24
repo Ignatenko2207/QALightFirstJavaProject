@@ -4,12 +4,11 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.logging.Logger;
 
-import ua.com.qalight.ignatenko.User;
 import ua.com.qalight.ignatenko.service.Randomizer;
 
-public class AppRunner {
+public class RandomizerRunner {
 
-	static Logger logger = Logger.getLogger(AppRunner.class.getName());
+	static Logger logger = Logger.getLogger(RandomizerRunner.class.getName());
 	
 	public static void main(String[] args) {
 
