@@ -17,9 +17,9 @@ public class RandomizerRunner {
 
 		for (int i = 0; i < 10; i++) {
 
-			String email  = Randomizer.getRandomString(Randomizer.getRandomInteger(8, 16));
+			String email = Randomizer.getRandomString(Randomizer.getRandomInteger(8, 17));
 
-			email = "@" + Randomizer.getRandomDomain(Randomizer.getRandomInteger(1, 5));
+			email = email +  "@" + Randomizer.getRandomDomain(Randomizer.getRandomInteger(0, 5));
 
 			emails.add(email);
 

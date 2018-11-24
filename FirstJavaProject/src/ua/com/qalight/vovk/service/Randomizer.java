@@ -11,8 +11,16 @@ public class Randomizer {
 	
 	private static final List<String> DOMAINS = Arrays.asList("gmail.com", "hotmail.com", "mail.com", "i.ua", "bigmir.net");
 
+	
+/**
+ * @author vovkolga
+ * 
+ * @param min - starts from variable
+ * @param max - ends with (max-1)
+ * @return
+ */
 	public static Integer getRandomInteger(int min, int max) {
-		Integer maxValue =(int)((max-min)*Math.random())+1;
+		Integer maxValue =(int)((max-min)*Math.random());
 		
 		return min + maxValue;
 		
@@ -21,17 +29,17 @@ public class Randomizer {
 	public static String getRandomDomain(int index) {
 		
 		switch (index) {
-		case 1:
-			return DOMAINS.get(0);
+		case 0:
+			return DOMAINS.get(index);
 		
+		case 1:
+			return DOMAINS.get(index);	
 		case 2:
-			return DOMAINS.get(1);	
+			return DOMAINS.get(index);
 		case 3:
-			return DOMAINS.get(2);
+			return DOMAINS.get(index);
 		case 4:
-			return DOMAINS.get(3);
-		case 5:
-			return DOMAINS.get(4);
+			return DOMAINS.get(index);
 		
 			default:
 				return DOMAINS.get(0);
