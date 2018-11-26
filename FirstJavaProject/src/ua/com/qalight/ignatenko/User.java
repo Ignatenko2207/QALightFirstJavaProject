@@ -45,4 +45,9 @@ public class User {
 	public static void showClassName() {		
 		System.out.println(User.class.getSimpleName());
 	}
+	
+	@Override
+	public String toString() {
+		return userName + " " + userSurname;
+	}
 }
