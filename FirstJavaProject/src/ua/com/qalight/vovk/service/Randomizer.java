@@ -9,7 +9,7 @@ public class Randomizer {
 	private static final String LETTERS_UPPER_CASE = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	private static final String NUMBERS = "1234567890";
 	
-	private static final List<String> DOMAINS = Arrays.asList("gmail.com", "hotmail.com", "mail.com", "i.ua", "bigmir.net");
+	public static final List<String> DOMAINS = Arrays.asList("gmail.com", "hotmail.com", "mail.com", "i.ua", "bigmir.net");
 
 	
 /**
@@ -52,7 +52,7 @@ public class Randomizer {
 		String out = "";
 		
 		
-		for (int i = 0;i<stringLenght; i++) {
+		for (int i = 0; i < stringLenght; i++) {
 			out +=  getRandomLetter();
 			
 		}
